@@ -1,0 +1,201 @@
+.health-metrics {
+  background: white;
+  
+   display: flex;
+  gap: 32px;
+  background: white;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.human-body {
+  position: relative;
+}
+
+.body-container {
+  position: relative;
+  height: 100%;
+}
+
+.body-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 16px;
+  filter: hue-rotate(20deg) saturate(1.2);
+}
+
+.health-tag {
+  position: absolute;
+  top: 60px;
+  right: -20px;
+  background: #ff6b6b;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+.healthy-log-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: #00d4ff;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 212, 255, 0.3);
+}
+
+.healthy-log-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 212, 255, 0.4);
+}
+
+.metrics-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.metric-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 16px;
+  transition: all 0.2s ease;
+}
+
+.metric-card:hover {
+  background: #f1f5f9;
+  transform: translateX(4px);
+}
+
+.metric-icon {
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.metric-info {
+  flex: 1;
+}
+
+.metric-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 4px;
+}
+
+.metric-subtitle {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.details-btn {
+  background: none;
+  border: none;
+  color: #667eea;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.details-btn:hover {
+  background: #667eea;
+  color: white;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1200px) {
+  .health-metrics {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .body-indicator,
+  .body-tag {
+    position: static;
+    margin: 0.5rem;
+    display: inline-block;
+  }
+  
+  .human-body {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .health-metrics {
+    padding: 1.5rem;
+  }
+  
+  .body-image {
+    width: 150px;
+    height: 225px;
+  }
+  
+  .metric-card {
+    padding: 1rem;
+  }
+  
+  .metric-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .health-metrics {
+    padding: 1rem;
+  }
+  
+  .body-image {
+    width: 120px;
+    height: 180px;
+  }
+  
+  .metric-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+}
