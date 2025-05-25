@@ -21,6 +21,12 @@
   border-radius: 12px;
   transition: all 0.2s ease;
 }
+.logo {
+    height: 2rem;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+}
 
 .logo-button:hover {
   background: #f1f5f9;
@@ -100,6 +106,11 @@
   border-top: 1px solid #e2e8f0;
 }
 
+.sidebar-tool{
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid #e2e8f0;
+}
 .settings-btn {
   opacity: 0.8;
 }
@@ -108,7 +119,7 @@
   opacity: 1;
 }
 
-/* Active states for better accessibility */
+
 .nav-item:active {
   transform: scale(0.98);
 }

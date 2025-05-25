@@ -4,7 +4,8 @@ import './App.css';
 
 import  Sidebar from './components/sidebars/Sidebar'
 // import { Component, Sidebar } from 'lucide-react'
-
+import Header from './components/Header/Header';
+import Dashboard from './components/Dashboard';
 function App() {
  
 
@@ -12,7 +13,8 @@ function App() {
     <>
       
       <Sidebar />
-
+<Header/>
+        <Dashboard />
       
    </>  
     

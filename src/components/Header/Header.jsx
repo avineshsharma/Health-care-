@@ -1,36 +1,29 @@
-import React from 'react';
-import { Search, Bell, Plus } from 'lucide-react';
-import './TopBar.css';
+import React from "react";
 
-const Header = () => {
+import './Header.css'
+
+const Header =() =>{
   return (
-    <div className="header">
-      <div className="header-left">
-        <div className="search-container">
-          <Search size={20} className="search-icon" />
-          <input 
-            type="text" 
-            placeholder="Search..." 
-            className="search-input" 
-          />
-        </div>
-      </div>
-      <div className="header-right">
-        <div className="notification-wrapper">
-          <Bell size={20} className="notification-icon" />
-          <span className="notification-badge">3</span>
-        </div>
-        <div className="user-avatar">
-          <img 
-            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" 
-            alt="User Avatar" 
-          />
-        </div>
-        <div className="add-button">
-          <Plus size={20} />
-        </div>
-      </div>
+<div className="header">
+  <div className="header-left">
+    <h1 className="page-title">Dashboard</h1>
+    <div className="search-bar">
+      <span className="search-icon">🔍</span>
+      <input type="text" placeholder="Search...." />
     </div>
+  </div>
+
+
+  <div className="header-right">
+    <div className="notification-icon">🔔</div>
+    <div className="user-avatar">
+       <img src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-No-Background.png" alt="User" />
+    </div>
+    <button className="add-btn">+</button>
+  </div>
+
+
+</div>
   );
 };
 
