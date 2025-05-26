@@ -31,7 +31,7 @@ const HealthMetrics = () =>{
             <div className="human-body">
                 <div className="body-container"> 
                     <img 
-            src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=300&h=400&fit=crop" 
+            src="https://c8.alamy.com/comp/D2D4W8/human-cardiovascular-system-computer-artwork-D2D4W8.jpg" 
             alt="Human anatomy" 
             className="body-image"
           />

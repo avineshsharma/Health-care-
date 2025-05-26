@@ -2,13 +2,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 8px;
+  padding: 0 32px;
+  /* padding-bottom: 300px;
+  padding-top: 300px; */
 }
 
 .header-left {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 0px;
 }
 
 .page-title {
@@ -98,4 +100,35 @@
 .add-btn:hover {
   background: #00bfea;
   transform: scale(1.05);
+}
+
+
+
+
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 8px;
+  }
+  
+  .header-left {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+  
+  .page-title {
+    font-size: 1.5rem;
+  }
+  
+  .search-bar {
+    min-width: 100%;
+  }
+  
+  .header-right {
+    justify-content: center;
+  }
 }

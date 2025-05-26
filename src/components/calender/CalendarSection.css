@@ -94,7 +94,7 @@
 
 .appointment-cards {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 12px;
 }
 
@@ -168,4 +168,51 @@
 
 .appointment-status {
   font-size: 1.2rem;
+}
+
+/* Add these styles to your calendarSection.css */
+
+.appointment-cards {
+    margin-top: 20px;
+    padding: 16px;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.appointment-card {
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.dentist-card {
+    background-color: #dbeafe; /* Light blue*/
+}
+
+.physio-card {
+    background-color: #e9d5ff; /* Light purple */
+}
+
+.card-title {
+    font-weight: bold;
+    margin: 0 0 8px 0;
+    font-size: 16px;
+}
+
+.card-details {
+    font-size: 14px;
+    margin: 0;
+    color: #666;
+}
+
+/* Responsive design for larger screens */
+@media (min-width: 768px) {
+    .cards-container {
+        flex-direction: row;
+    }
 }
