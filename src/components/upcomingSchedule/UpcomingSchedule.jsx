@@ -1,64 +1,92 @@
-// import React from 'react';
-// import './UpcomingSchedule.css';
+import React from 'react';
+import './UpcomingSchedule.css';
 
-// const UpcomingSchedule = () => {
-//   return (
-//     <div className="schedule-container">
-//       <h2 className="schedule-title">The Upcoming Schedule</h2>
-      
-//       <div className="day-section">
-//         <h3 className="day-title">On Thursday</h3>
-//         <div className="appointments-row">
-//           <div className="appointment-card">
-//             <div className="appointment-info">
-//               <span className="appointment-title">Health checkup complete</span>
-//               <span className="appointment-time">11:00 AM</span>
-//             </div>
-//             <div className="appointment-icon">
-//               <span className="icon">🩺</span>
-//             </div>
-//           </div>
-          
-//           <div className="appointment-card">
-//             <div className="appointment-info">
-//               <span className="appointment-title">Ophthalmologist</span>
-//               <span className="appointment-time">14:00 PM</span>
-//             </div>
-//             <div className="appointment-icon">
-//               <span className="icon">👁️</span>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-      
-//       <div className="day-section">
-//         <h3 className="day-title">On Saturday</h3>
-//         <div className="appointments-row">
-//           <div className="appointment-card">
-//             <div className="appointment-info">
-//               <span className="appointment-title">Cardiologist</span>
-//               <span className="appointment-time">12:00 AM</span>
-//             </div>
-//             <div className="appointment-icon">
-//               <span className="icon">❤️</span>
-//             </div>
-//           </div>
-          
-//           <div className="appointment-card">
-//             <div className="appointment-info">
-//               <span className="appointment-title">Neurologist</span>
-//               <span className="appointment-time">16:00 PM</span>
-//             </div>
-//             <div className="appointment-icon">
-//               <span className="icon">🧠</span>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
+const UpcomingSchedule = () => {
+    const thursdayAppointments = [
+        {
+      type: 'Health checkup complete',
+      time: '11:00 AM',
+      status: 'completed',
+      icon: '✅'
+    },
+    {
+      type: 'Ophthalmologist',
+      time: '14:00 PM',
+      status: 'upcoming',
+      icon: '👁️'
+    }
+  ];
 
-// export default UpcomingSchedule;
+   const saturdayAppointments = [
+    {
+      type: 'Cardiologist',
+      time: '12:00 AM',
+      status: 'priority',
+      icon: '❤️'
+    },
+    {
+      type: 'Neurologist',
+      time: '16:00 PM',
+      status: 'upcoming',
+      icon: '🧠'
+    }
+  ];
+    
+   return (
+   <div className="upcoming-schedule">
+    <h3 className="schedule-title">The Upcoming Schedule</h3>
+
+
+    <div className="schedule-day">
+        <h4 className="day-title">On Thursday</h4>
+        <div className="appointments-list">
+            {thursdayAppointments.map((appointment,index) =>(
+                <div  key={index} className={`appointment-item ${appointment.status}`}>
+                    <div className="appointment-icon-wrapper">
+                        <span className="appointment-icon">{appointment.icon}</span>
+                    </div>
+                    <div className="appointment-content">
+                <div className="appointment-type">{appointment.type}</div>
+                <div className="appointment-time">{appointment.time}</div>
+              </div>
+               {appointment.status === 'completed' && (
+                <div className="appointment-action">✏️</div>
+              )}
+              {appointment.status === 'upcoming' && (
+                <div className="appointment-action">👁️</div>
+              )}
+                </div>
+            ))}
+        </div>
+    </div>
+
+     <div className="schedule-day">
+        <h4 className="day-title">On Saturday</h4>
+        <div className="appointments-list">
+          {saturdayAppointments.map((appointment, index) => (
+            <div key={index} className={`appointment-item ${appointment.status}`}>
+              <div className="appointment-icon-wrapper">
+                <span className="appointment-icon">{appointment.icon}</span>
+              </div>
+              <div className="appointment-content">
+                <div className="appointment-type">{appointment.type}</div>
+                <div className="appointment-time">{appointment.time}</div>
+              </div>
+              {appointment.status === 'priority' && (
+                <div className="appointment-action priority">❤️</div>
+              )}
+              {appointment.status === 'upcoming' && (
+                <div className="appointment-action">👨‍⚕️</div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+   </div>
+        
+   );
+};
+
+export default UpcomingSchedule;
 
 

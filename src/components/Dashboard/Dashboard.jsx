@@ -5,7 +5,7 @@ import Calendar from '../calender/Calendar';
 import ActivityChart from '../Activity/ActivityChart ';
 
 
-// import UpcomingSchedule from '../upcomingSchedule/UpcomingSchedule';
+import UpcomingSchedule from '../upcomingSchedule/UpcomingSchedule';
 
 
 const Dashboard = () =>{
@@ -19,7 +19,7 @@ const Dashboard = () =>{
 
                 <div className="right-column">
                     <Calendar/>
-                    {/* <UpcomingSchedule /> */}
+                    <UpcomingSchedule />
 
                 </div>
             </div>
