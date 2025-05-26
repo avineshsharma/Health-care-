@@ -4,10 +4,11 @@
 
 }
 
-.dashborad-grid{
+.dashborad-content{
   display: grid;
   grid-template-columns: 1fr 400px;
-  gap: 24px;
+  gap: 32px;
+  margin-top: 24px;
   height: 100%;
 }
 

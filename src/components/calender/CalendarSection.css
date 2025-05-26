@@ -1,0 +1,171 @@
+.calendar-widget {
+  background: white;
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.calendar-header {
+  margin-bottom: 24px;
+}
+
+.month-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-arrow {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #64748b;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.nav-arrow:hover {
+  background: #f1f5f9;
+  color: #1a202c;
+}
+
+.month-info {
+  text-align: center;
+}
+
+.week-label {
+  display: block;
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-bottom: 4px;
+}
+
+.month-year {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a202c;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.calendar-day {
+  text-align: center;
+}
+
+.day-header {
+  margin-bottom: 8px;
+}
+
+.day-name {
+  display: block;
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-bottom: 4px;
+}
+
+.day-date {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a202c;
+}
+
+.day-appointments {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.appointment-slot {
+  font-size: 0.75rem;
+  color: #64748b;
+  padding: 2px 4px;
+  border-radius: 4px;
+  background: #f8fafc;
+}
+
+.appointment-slot.highlighted {
+  background: #667eea;
+  color: white;
+}
+
+.appointment-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.appointment-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 16px;
+  transition: all 0.2s ease;
+}
+
+.appointment-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-card.dentist {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.appointment-card.physio {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.appointment-icon {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+}
+
+.appointment-card.physio .appointment-icon {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-details {
+  flex: 1;
+}
+
+.appointment-type {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.appointment-time {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 4px;
+}
+
+.appointment-card.physio .appointment-time {
+  color: #64748b;
+}
+
+.appointment-doctor {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.appointment-card.physio .appointment-doctor {
+  color: #64748b;
+}
+
+.appointment-status {
+  font-size: 1.2rem;
+}
