@@ -1,11 +1,11 @@
 import React from "react";
-import './calendarSection.css';
+import calender from"./CalendarSection.css";
 
 const Card = ({ className, children }) => {
     return <div className={`card ${className}`}>{children}</div>;
 };
 
-const Calendar = () => {
+const calendar = () => {
     const currentWeek = [
         { day: 'Mon', date: 25, appointments: [{ time: '10:00' }, { time: '11:00' }, { time: '12:00' }] },
         { day: 'Tues', date: 26, appointments: [{ time: '08:00' }, { time: '09:00' }, { time: '10:00' }, { time: '13:00' }] },
@@ -50,18 +50,7 @@ const Calendar = () => {
             </div>
 
           
-            {/* <div className="appointment-cards">
-                <div className="cards-container">
-                    <div className="appointment-card dentist">
-                        <p className="card-title">Dentist</p>
-<p className="card-details">09:00 - 11:00, Dr. Cameron Williamson</p>
-                    </div>
-                    <div className="appointement-card physio-card">
-                        <p className="card-title">Physiotherapy</p>
-                        <p className="card-details">11:00 - 12:00, Dr. Kevin Djones</p>
-                    </div>
-                </div>
-            </div> */}
+            
               <div className="appointment-cards">
         <div className="appointment-card dentist">
           <div className="appointment-icon">🦷</div>
@@ -86,4 +75,4 @@ const Calendar = () => {
     );
 };
 
-export default Calendar;
+export default calendar;

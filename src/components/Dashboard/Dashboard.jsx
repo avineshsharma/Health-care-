@@ -2,7 +2,7 @@ import React from 'react';
 import './Dashboard.css';
 import HealthMetrics from '../HealthMetrics/HealthMetrics';
 import Calendar from '../calender/Calendar';
-import ActivityChart from '../Activity/ActivityChart ';
+import ActivityChart from '../Activity/ActivityChart';
 
 
 import UpcomingSchedule from '../upcomingSchedule/UpcomingSchedule';
@@ -19,7 +19,7 @@ const Dashboard = () =>{
 
                 <div className="right-column">
                     <Calendar/>
-                    <UpcomingSchedule />
+                    <UpcomingSchedule/>
 
                 </div>
             </div>

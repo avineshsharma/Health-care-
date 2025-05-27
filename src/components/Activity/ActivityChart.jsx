@@ -1,6 +1,6 @@
 import React from "react";
 
-import './ActivityChart .css'
+import './ActivityChart.css';
 
 const ActivityChart = () =>{
     const chartData= [
